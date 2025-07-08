@@ -42,6 +42,26 @@
       </div>
     </div>
   </nav>
+
+  <!-- Welcome Alert -->
+  <div id="welcomeAlert" class="alert alert-success alert-dismissible fade show position-absolute w-100 text-center" role="alert" style="z-index: 1050; top: 56px; left: 0;">
+    Welcome to MyGuest! Explore our properties and services.
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        var alertEl = document.getElementById('welcomeAlert');
+        if (alertEl) {
+          var bsAlert = bootstrap.Alert.getOrCreateInstance(alertEl);
+          bsAlert.close();
+        }
+      }, 3000);
+    });
+  </script>
+<!-- End of Welcome Alert -->
+
+
+
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
